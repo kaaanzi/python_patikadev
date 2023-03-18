@@ -1,0 +1,76 @@
+l = [(1,2), (10,20)]
+for e in l:
+    print(e)
+
+for e in l:
+    a,b = e
+    print('tuple ın ilk elemanı:', a)
+    print('tuple ın ilk elemanı:', b)
+    print("*****")
+
+#enumarete bize (index,element) olarak verecek.  
+
+adlar = ["Tyler","Blake","Cory","Cameron"]
+    
+for i, e in enumerate(adlar, start = 1):
+    print(i, "indexindeki eleman:", e)
+
+#Zip farklı yapılar içerisinde iterasyon yapmamızı sağlar.
+ogrenciler = ["ogrenci_1","ogrenci_2", "ogrenci_3"]
+notlar = [90,80,72]
+
+for i in range(len(ogrenciler)):
+    s = ogrenciler[i]
+    g = notlar[i]
+
+    print(s,g)
+
+
+for s, g in zip(ogrenciler,notlar):
+    print(s,g)
+
+
+satis = [35000.00, 76300.00, 67200.00]
+maliyet = [56700.00, 21900.00,12100.00]
+for i in range(len(maliyet)):
+    s = satis[i]
+    c = maliyet[i]
+    kar = s-c 
+    print(f'Total Profit: {kar}')
+
+
+#enumerate ile yazılmış hali.
+
+satis = [35000.00, 76300.00, 67200.00]
+maliyet = [56700.00, 21900.00,12100.00]
+for s, c in zip(satis,maliyet):
+    kar = s-c
+    print(f'Total Profit: {kar}')
+
+keys = ['isim', 'soyad','ülke','is']
+values = ['Denis','Walker','Turkey','data scientist']
+
+d = {}
+for k, v in zip(keys, values):
+    d[k]=v
+print(d)
+
+keys = ['isim', 'soyad','ulke','is']
+values = ['Denis','Walker','Turkey','data scientist']
+d = {}
+for i in range(len(keys)):
+    k = keys[i]
+    v = values[i]
+
+    d[k] = v
+
+print(d)
+
+
+magic_dict = dict(val1=44, val2='secret value', val3=55.0, val4=1)
+sum_of_values = 0
+for e,i in magic_dict.items():
+    if isinstance(i,(int,float)):
+        sum_of_values += i
+print(sum_of_values)
+

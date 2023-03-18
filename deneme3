@@ -1,0 +1,8 @@
+original = ['I', 'am', 'learning', 'hacking', 'in']
+modified = list(original)
+modified[3] ='lists'
+modified.append('Python')
+print(original)
+print(modified)
+
+%list diye kopyalarsan listenin orijinalini koruyup kopyalama işlemi yapabilirsin. veya bunun yerine .copy kullanılabilir.

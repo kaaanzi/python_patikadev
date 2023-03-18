@@ -1,0 +1,77 @@
+n = int(input())
+
+def f(n):
+    x = range(1, n+1)
+    for i in x:
+        print(i, end ="")
+
+print(f(3))
+
+
+
+def my_function(username):
+    print(f'Hello {username}')
+
+my_function('Kaan')
+
+# fonksiyonun aldığı depere paramaetre, çağırırken kullandıpımıza argüman denir.
+
+
+# return isteneni döndürür ama biz onunla ne yapıcağımızı belirtmiyoruz. 
+
+def func1():
+    return 5 + 10 
+
+def func2():
+    print(6 + 10)
+
+result1 = func1()
+result2 = func2()
+
+print(f'Result 1, {result1}')
+print(f'Result 2,{result2}') 
+
+#Result 2 none geldi çünkü 16yı print ettikten sonra biz onu çağırdık. Dönen herhangibir değer olmaığı için Result2 none şeklinde dönmüş oldu. 
+
+
+def func(): 
+    pass 
+#Fonksiyon herhangibir şekilde işlem yapmaz. 
+
+def list_benefits():
+    return ["More organized code", "More readable code", "Easier code reuse", "Allowing programmers to share and connect code together"]
+
+# Modify this function to concatenate to each benefit - " is a benefit of functions!"
+def build_sentence(benefit):
+    return "%s is a benefit of functions!" % benefit
+
+def name_the_benefits_of_functions():
+    list_of_benefits = list_benefits()
+    for benefit in list_of_benefits:
+        print(build_sentence(benefit))
+
+
+#listenin içinde isteneni bulan fonksiyon
+WANTED_PEOPLE = ['John Doe', 'Clint Eastwood', 'Chuck Norris']
+
+wanted1 = []
+
+
+def find_wanted_people(killer):
+    wanted1 = []
+    for i in killer:
+        if i in WANTED_PEOPLE:
+            wanted1.append(i)
+    return wanted1
+
+# Counting average length of words in a sentence
+
+def average_length_of_words(sentence = 'b'):
+    totalword = 0
+    words= sentence.split()
+    if not words:
+        return 0
+    for i in words:
+        totalword += len(i)
+    return round(totalword/len(words),1)
+    

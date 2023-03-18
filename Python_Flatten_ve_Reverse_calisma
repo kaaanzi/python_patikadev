@@ -1,0 +1,29 @@
+#Flatten Çalışması
+
+input = [[1, 'a', ['cat'], 2], [[[3]], 'dog'], 4, 5]
+flat_list = []
+def flatten(n):
+    for i in n:
+        if isinstance(i, list):
+            flatten(i)
+        else:
+            flat_list.append(i)
+
+
+flatten(input)
+print("flatten: " ,flat_list)
+
+#Tersine döndüren fonksiyon çalışması 
+
+input2 = [[1, 2], [3, 4], [5, 6, 7]]
+def reverser(input2):
+    for x in range(int(len(input2))):
+     (input2[x])=(input2[x])[::-1]
+     input2=input2[::-1]
+     return input2 
+
+print("reversed: ",reverser(input2))
+
+
+
+

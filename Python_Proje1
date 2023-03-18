@@ -1,0 +1,21 @@
+
+
+
+
+karma = [[1,'a',['cat'],2],[[[3]],'dog'],4,5]
+karma_yeni =[]
+for l in karma:
+    for e in l:
+        karma_yeni.append(e)
+        print(e)
+        
+
+[[1,'a',['cat'],2],[[[3]],'dog'],4,5]
+def flatten(x):
+    if isinstance(x, list):
+        x_new = [e for l in x for e in flatten(l)]  
+        return x_new 
+    else:
+        return x
+
+flatten([[1,'a',['cat'],2],[[[3]],'dog'],4,5])

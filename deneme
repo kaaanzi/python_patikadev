@@ -1,0 +1,7 @@
+K = 'Kaan Berk Donmez'
+K.split(' ')
+print(K)
+
+l= ['limon','portakal','elma']
+print('/'.join(l))
+print(l)

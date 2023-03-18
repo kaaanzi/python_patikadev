@@ -1,0 +1,89 @@
+original = [1, 2, 3]
+modified = original
+modified[0] = 99
+print('original: {}, modified: {}'.format(original, modified))
+
+original = [1, 2, 3]
+modified = list(original)  # Note list() 
+# Alternatively, you can use copy method
+# modified = original.copy()
+modified[0] = 99
+print('original: {}, modified: {}'.format(original, modified))
+
+my_list = [1]
+my_list.append('ham')
+print(my_list)
+
+isim = 'Kaan Berk Donmez'
+print("Benim adim {}".format(isim))
+
+numbers = [8, 1, 6, 5, 10]
+numbers.append(394)
+numbers.sort()
+print('numbers: {}'.format(numbers))
+
+numbers.sort(reverse=True)
+
+first_list = ['beef', 'ham']
+second_list = ['potatoes',1 ,3]
+first_list.extend(second_list)
+print('first: {}, second: {}'.format(first_list, second_list))
+first_list.reverse
+print(first_list)
+
+list1 = [6, 12, 5]
+list2 = [6.2, 0, 14, 1]
+list3 = [0.9]
+
+my_list = list1 + list2 + list3
+my_list.sort(reverse=True)
+print(my_list)
+
+my_dict = {'ham': 'good', 'carrot': 'semi good'}
+my_other_dict = dict(my_dict)
+my_other_dict['beer'] = 'decent'
+print('my_dict: {}\nother: {}'.format(my_dict, my_other_dict))
+print('equal: {}'.format(my_dict == my_other_dict))
+
+my_dict = dict(food='ham', drink='beer', sport='football')
+print('dict before pops: {}'.format(my_dict))
+
+food = my_dict.pop('food')
+print('food: {}'.format(food))
+print('dict after popping food: {}'.format(my_dict))
+
+food_again = my_dict.pop('food', 'default value for food')
+print('food again: {}'.format(food_again))
+print('dict after popping food again: {}'.format(my_dict))
+
+
+
+my_dict = {'a': 1, 'b': 2, 'c': 3}
+a = my_dict.setdefault('a', 'my default value')
+d = my_dict.setdefault('d', 'my default value')
+print('a: {}\nd: {}\nmy_dict: {}'.format(a, d, my_dict))
+
+
+
+dict1 = {'a': 1, 'b': 2}
+dict2 = {'c': 3}
+dict1.update(dict2)
+print(dict1)
+
+# If they have same keys:
+dict1.update({'c': 4})
+print(dict1)
+
+
+my_dict = {}
+my_dict.update(dict1)
+my_dict.update({'key1':'This is not that hard' })
+my_dict.update(dict2)
+my_dict.update({'key2':'Python is still cool' })
+
+my_dict.update(dict3)
+my_dict.update({'key2':456 })
+special_value = my_dict.get('special_key')
+my_dict.pop('special_key')
+print(my_dict)
+

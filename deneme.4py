@@ -1,0 +1,8 @@
+original = ['I', 'am', 'learning', 'hacking', 'in']
+modified = original
+modified[3] ='lists'
+modified.append('Python')
+
+my_list = list1 + list2 + list3
+my_list.reverse().sort()
+print(my_list)
